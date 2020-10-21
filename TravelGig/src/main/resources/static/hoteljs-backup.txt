@@ -1,0 +1,88 @@
+$("#filterBtn").click(function() {
+
+			
+			$("#tableBody").children("tr").show();
+			var selectedRatings = $(".star_rating:checked");
+			var ratingsLength = selectedRatings.length>0?true:false;
+			//alert(ratingsLength);
+
+			$.each($("#tableBody").children("tr"), function () {
+
+
+				//================== Filter by star rating ==================
+				
+				
+				var hotelStar = $(this).children("td").eq(6).text();
+				var starFlag = 0;
+				
+				$.each(selectedRatings, function() {
+
+					var selectedRating;
+					
+					if ($(this).prop("checked")) {
+
+						selectedRating  = $(this).val();
+						
+					}
+
+					if (hotelStar == selectedRating) {
+						starFlag = 1;
+					}
+				})
+
+				if (starFlag == 0 && ratingsLength) {
+					$(this).hide();
+				}
+
+				//================== END STAR RATING FILTER ==================
+
+				//================== Filter by price ==================
+
+				var hotelPrice = parseFloat($(this).children("td").eq(4).text());
+				//alert("hotelPrice: " + hotelPrice);
+				var selectedPriceRange = parseFloat($("#priceValue").text());
+				//alert("selectedPriceRange: " + selectedPriceRange);
+				var priceFlag = 0;
+
+				if (hotelPrice > selectedPriceRange) {
+					$(this).hide();
+				}
+
+				//================== END PRICE FILTER ==================
+
+				//================== Filter by amenities ==================
+
+				var selectedAmenities = $(".hotel_amenity:checked");
+				var filterByAmenities = selectedAmenities.length>0?true:false;
+
+				if (filterByAmenities) {
+
+					var amenityFlag = 0;
+					var included = 0;
+					var hotelAmenities = $(this).children("td").eq(5).text().toUpperCase();
+					
+
+					$.each(selectedAmenities, function () {
+
+						//alert(hotelAmenities + ", " + $(this).val());
+						
+						if (hotelAmenities.includes($(this).val())) {
+							included = 1;
+						} else {
+							included = 0;
+						}
+
+						amenityFlag = included;
+						
+					})
+
+					if (amenityFlag == 0) {
+						$(this).hide();
+					}
+					
+				}
+
+			});
+			
+			//alert("Accept Filter");
+		})

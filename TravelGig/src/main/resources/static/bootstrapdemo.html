@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="css/jquery.dataTables.min.css">
+<script>
+	$(document).ready(function() {
+
+	    $('#desigTable').DataTable( {
+	        orderCellsTop: true,
+	        fixedHeader: true,
+	        paginate: true,
+			"order": [[ 4, 'asc' ]]
+	    });
+	    
+		$("#btnModal").click(function() {
+
+			$("#myModal").modal('toggle');
+
+		});
+
+	});
+</script>
+<style>
+.stl1 {
+	font-size: 50px;
+}
+
+.stl2 {
+	font-size: 10px;
+}
+</style>
+</head>
+<body>
+	<div class="main-content">
+		<div class="content">
+			<div class="container-fluid">
+				<input type='hidden' id='companyId' />
+				<div class="col-lg-12">
+					<div class="boxWrap clearfix  panel panel-default">
+						<div class="boxTitle panel-heading">Qualified To Buy</div>
+						<div class="boxBody  panel-body">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label">Company Name</label> <input
+										type="text" name="companyName" class="form-control"
+										placeholder="Company name"
+										oninvalid="this.setCustomValidity('Company Name Cannot Be Left Empty')"
+										oninput="setCustomValidity('')" id="companyName"
+										required="required" />
+								</div>
+							</div>
+
+							<div class="col-md-6 ">
+								<div class="form-group">
+									<label class="control-label">Product</label> <select
+										class="form-control" required="required" name='product'
+										id='product' multiple="multiple">
+										<option value=''>Select</option>
+										<option>India</option>
+										<option>US</option>
+										<option>GERMANY</option>
+										<option>UK</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="form-group">
+									<table class="table table-bordered table-striped"
+										id='desigTable'>
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Name</th>
+												<th>Age</th>
+												<th>Salary</th>
+												<th>Address</th>
+												<th>City</th>
+												<th>Country</th>
+										   </tr>
+										</thead>
+											<tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										   <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										   <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										   <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										   										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										   										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										   
+										   										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										   										    <tr>
+												<td>101</td>
+												<td>Ankit</td>
+												<td>37</td>
+												<td>500</td>
+												<td>Gzb</td>
+												<td>Delhi</td>
+												<td>India</td>
+										   </tr>
+										   
+										   
+										   
+									</table>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<input type='button' value='OPEN MODAL' id='btnModal' />
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Modal Header</h4>
+				</div>
+				<div class="modal-body">
+					<p>Some text in the modal.</p>
+					<input type='text' class='form-control' />
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.styl1 {
+	background-color: #84a10b; } .styl2 {
+	background-color: red;
+}
+</style>
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+
+		$("#addClassBtn").click(function() {
+
+			$("a").addClass('styl2');
+
+		})
+
+		$("#removeClassBtn").click(function() {
+
+			$("a").removeClass('styl2');
+
+		})
+
+		$("#toggleClassBtn").click(function() {
+
+			$("a").toggleClass('styl2');
+
+		})
+
+		$("#loopBtn").click(function() {
+
+			$("li").each(function() {
+				alert($(this).text());
+			});
+
+		})
+		
+
+		var list = $("#list").detach();
+	
+		$("p").dblclick(function() {
+			
+			$('#test').append(list);
+			
+		});
+		
+
+		/* $("li:first").css({"background-color":"blue"});
+		$("li:last").css({"background-color":"red"}); */
+
+		/* $("li:even").css({"background-color":"red"});
+		$("li:odd").css({"background-color":"green"}); */
+
+		/* $("a:contains(Click Me)").css({"background-color":"green"}); */
+
+		/* $("li:has(a)").css({"background-color":"green"}); */
+
+		/* $("ul").prepend("<li>Australia</li>");
+		
+		$("ul").append("<li>South Africa</li>");
+		 */
+
+		/* alert($("li:first").html());
+
+		alert($("li:first").text());
+		 */
+
+	});
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		<a href='#' class='styl1'>Click Me</a></br> <a href='#'>Hit Me</a>
+	</div>
+	<ul>
+		<li><a href='#' class='styl1'>Country</a>India</li>
+		<li>US</li>
+		<li>China</li>
+		<li>Germany</li>
+	</ul>
+
+	<input type='button' id='addClassBtn' value='Add Class' />
+	<input type='button' id='removeClassBtn' value='Remove Class' />
+	<input type='button' id='toggleClassBtn' value='Toggle Class' />
+	<input type='button' id='loopBtn' value='Loop List' />
+
+
+	<h1>Showing Attach & Detach</h1>
+
+	<div id="test">
+		<p>Engineering streams</p>
+		<ol id="list">
+			<li>CSE</li>
+			<li class="dif">EEE</li>
+			<li>ECE</li>
+			<li>ME</li>
+		</ol>
+	</div>
+</body>
+</html>

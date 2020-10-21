@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/table.js"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+<script src="/js/bootstrap.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table class="table table-bordered table-striped" id='desigTable'>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Gender</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tr>
+			<td>Ankit</td>
+			<td>37</td>
+			<td>Male</td>
+			<td><a href='#' class='seeDetails' data-empcode='6820'>SeeDetails</a></td>
+		</tr>
+		<tr>
+			<td>Nitin</td>
+			<td>41</td>
+			<td>Male</td>
+			<td><a href='#' class='seeDetails' data-empcode='6821'>SeeDetails</a></td>
+		</tr>
+		<tr>
+			<td>Veena</td>
+			<td>39</td>
+			<td>Female</td>
+			<td><a href='#' class='seeDetails' data-empcode='6822'>SeeDetails</a></td>
+		</tr>
+	</table>
+</body>
+
+<div class="modal fade" id="empDetails" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Emp Details</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="boxWrap clearfix  panel panel-default">
+							<div class="boxTitle panel-heading">Emp Details</div>
+							<div class="boxBody panel-body">
+								<div class="col-md-12">
+									<form id='editEmp'>
+										<input type='hidden' name='empId' id='empId'/>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="col-sm-12 control-label">Name</label>
+													<div class="col-sm-12">
+														<input type="text" name="empName" id='empName'
+															class="form-control" />
+													</div>
+
+													<label class="col-sm-12 control-label">Age</label>
+													<div class="col-sm-12">
+														<input type="text" name="empAge" id='empAge'
+															class="form-control" />
+													</div>
+
+													<label class="col-sm-12 control-label">Gender</label>
+													<div class="col-sm-12">
+														<input type="text" name="empGender" id='empGender'
+															class="form-control" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12 clearfix" align="center">
+												<div class="form-group">
+													<br>
+													<button type="submit"
+														class="btn btn-primary btnviewallattn">Edit
+														Emp Details</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</html>

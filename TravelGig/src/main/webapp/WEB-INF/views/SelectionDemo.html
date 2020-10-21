@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function() {
+	$("button").click(function(){
+		
+		$("h3").text("Sorry Ankit I am changing you on the fly...")
+				
+	});
+	
+	$("ul>a").click(function(){
+		
+		alert("descendent selector...");
+		
+	});
+	
+	/* $('input[value="Button1"]').click(function(){
+		
+		alert("HI i am selected by attribute value..");
+		
+	}); */
+	
+	/* $('input[value^="Butt"]').click(function(){
+		
+		//alert("Hi I have clicked a button having a value " +$(this).val());
+		//alert("first list element is "+$("li:first").text());
+		//alert("first list element is "+$("li:last").text());
+		//$("li:even").css("background-color","red");
+		//$("li:even").css("background-color","red");
+		//$("li:odd").css("background-color","blue");
+		//$("li:has(a)").css("background-color","blue");
+		//$("li:not(.myclass)").css("background-color","blue");
+		
+	}); */
+	
+	$("#show").click(function(){
+		
+		$("h3").show();
+				
+	});
+	
+	$("#hide").click(function(){
+		
+		$("h3").hide();
+				
+	});
+	
+	$("a:contains(LA)").click(function(){
+		
+		//$("h3").hide();
+		//$("ul").append("<li>UK</li>");
+		//$("ul").prepend("<li>UK</li>");
+		$("ul").after("<li>UK</li>");
+		
+				
+	});
+	
+	$("#50px").click(function(){
+		
+		$("h3").addClass("stl1");		
+				
+	});
+	$("#10px").click(function(){
+		
+		$("h3").removeClass("stl1");		
+				
+	});
+	
+	$("#togglecss").click(function(){
+		
+		$("h3").toggleClass("stl1");		
+				
+	});
+	
+	$("#css").click(function(){
+		
+		$("h3").css({"font-size":"500%","background-color":"red"});		
+				
+	});
+	
+	$("#loopli").click(function(){
+		
+		$("li").each(function(){
+			
+			alert($(this).text());
+			
+		});		
+				
+	});
+		
+});	
+</script>
+<style>
+.stl1{
+font-size: 50px;
+}
+.stl2{
+font-size: 10px;
+}
+</style>
+</head>
+<body>
+<h3 class='10px'>Ankit Arora</h3>
+<button>HIT ME PLS</button>
+<a href='#'>Anchor Tag</a>
+<ul>
+<a href='#'>Direct Child</a>
+<li class='sbc'>Germany</li>
+<li class='myclass'><a href='#'>India</a></li>
+<li class='sbc'>US</li>
+<li class='sbc'>France</li>
+</ul>
+<input type='button' value='HIDE' id='hide'/>
+<input type='button' value='SHOW' id='show'/>
+<input type='button' value='Button3'/>
+
+<a href='#'>LA</a>
+<a href='#'>DC</a>
+<a href='#'>CAL</a>
+
+<input type='button' value='10PX' id='10px'/>
+<input type='button' value='50PX' id='50px'/>
+<input type='button' value='TOGGLE' id='togglecss'/>
+<input type='button' value='CSS' id='css'/>
+<input type='button' value='LOOP LI' id='loopli'/>
+
+</body>
+</html>
